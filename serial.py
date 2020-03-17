@@ -20,10 +20,13 @@ class SerialGenerator:
     100
     """
 
-    def __init__(self, start = 100):
+    def __init__(self, start=100):
         "Initialize with a start number"
         self.start = start
         self.current_serial = start - 1
+
+    def __repr__(self):
+        return f"<SerialGenerator start={self.start} current_serial={self.current_serial}>"
     
     def generate(self):
         "Return the next sequential serial"
